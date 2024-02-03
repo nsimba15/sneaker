@@ -1,0 +1,960 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family:sans-serif;
+  box-sizing: border-box;
+}
+
+:root{
+  --nikeText: #FF6452;
+  --textColor: #6b6b6b;
+  --summerColor: #fa358e;
+  --black: #000;
+  --fontw: bold;
+  --white: #fff;
+}
+
+
+.banner{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 110vh;
+  align-items: center;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+
+.banner header{
+  width: 85%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top:0;
+  z-index: 1;
+  padding-top: 10px;
+}
+
+header .logo{
+  width: 150px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: var(--nikeText);
+}
+
+.logo img{
+  height: 100%;
+}
+
+header .navlist ul{
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  color: var(--textColor);
+}
+ul li{
+  cursor: pointer;
+}
+
+header button{
+  background-color: var(--nikeText);
+  color: var(--white);
+  padding: 10px 12px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.banner .main{
+  display: flex;
+  width: 85%;
+  height: 100%;
+}
+
+.main .content{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.content .conteudo{
+  position: absolute;
+  width: 60%;
+  z-index: 1;
+  margin-top: 50px;
+}
+
+.content .conteudo h1{
+  font-size: 4.6rem;
+  word-spacing: 2px;
+  line-height: 1.1;
+  margin: 20px 0;
+}
+
+.arrival{
+  background-color: #fff;
+}
+
+.summer{
+  color: var(--summerColor);
+}
+
+.conteudo p{
+  transition: all .6s ease;
+  margin: 10px 0;
+  line-height: 1.5;
+  color: var(--textColor);
+}
+
+.conteudo button{
+  background-color: var(--nikeText);
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  color: var(--white);
+  gap: 10px;
+  border-radius: 30px;
+  border: none;
+  margin: 20px 0;
+  width: 118px;
+  cursor: pointer;
+}
+.humb{
+  display: none;
+}
+.conteudo .plus{
+  display: flex;
+  gap: 50px;
+  margin-top: 60px;
+}
+
+.plus p{
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+p .big{
+  font-size: 1.8rem;
+  font-weight: var(--fontw);
+  color: var(--black);
+}
+p .small{
+  font-size: 13px;
+}
+
+.main .images{
+  flex: 1;
+  background-color: yellow;
+  background: url('../images/collection-background.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.images img{
+  width: 70%;
+  height: 55%;
+}
+
+.images .botom{
+  width: 65%;
+  height: 90px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  position: absolute;
+  bottom: -25px;
+  left: 35px;
+}
+
+.botom > img{
+  height: 100%;
+  width: 100px;
+  background: url('../images/thumbnail-background.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+img.active{
+  border: 2px solid var(--summerColor);
+}
+
+section{
+  width: 100%;
+  height: 100%;
+}
+
+section .product{
+  width: 85%;
+  height: 100%;
+  margin: 30px auto;
+}
+
+.product h2{
+  margin: 20px 0;
+}
+.popular{
+  color: var(--nikeText);
+}
+.product p{
+  margin-bottom: 40px;
+  text-align: justify;
+  width: 452px;
+  color: var(--textColor);
+}
+.product .shoes{
+  width: 100%;
+  height: 320px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 45px;
+}
+
+.shoes > div{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.shoes > div .overflow{
+  width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.shoes> div img{
+  width: 100%;
+  transition: all .5s ease-in;
+}
+.shoes> div img:hover{
+  width: 100%;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.shoes .star{
+  width: 20px;
+  height: 20px;
+}
+
+.shoes> div .conteshoes{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.conteshoes span.first{
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--textColor);
+}
+
+.conteshoes span:nth-child(2){
+  font-weight: var(--fontw);
+}
+.conteshoes span:nth-child(3){
+  font-weight: var(--fontw);
+  color: var(--nikeText);
+}
+
+section .another{
+  width: 85%;
+  height: 100%;
+  margin: 90px auto;
+}
+
+.another .provide{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.provide .two,
+.provide .one{
+  width: 420px;
+}
+.two img{
+  width: 100%;
+}
+.super{
+  color: var(--nikeText);
+}
+.one p{
+  margin: 20px 0;
+  text-align: justify;
+  color: var(--textColor);
+}
+
+.one .view{
+  background-color: var(--nikeText);
+  color: var(--white);
+  border-radius: 30px;
+  border: none;
+  padding: 10px 12px;
+  margin-top: 20px;
+}
+
+section .corners{
+  margin: 0 auto 94px;
+  width: 85%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.corners .cor{
+  box-shadow: 4px 4px 10px 8px rgb(233, 233, 233);
+  padding: 25px 15px;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+  transition: all .3s ease;
+}
+.cor:hover{
+  transform: scale(1.03);
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+.cor h3{
+  font-size: 1.2rem;
+}
+.cor p{
+  font-size: 15px;
+  color: var(--textColor);
+}
+
+.corners .circle{
+  width: 25px;
+  height: 25px;
+  border-radius: 30px;
+  background-color: var(--white);
+  border: 8px solid var(--nikeText);
+}
+
+section .offer{
+  margin: 0 auto 55px;
+  width: 85%;
+  display: grid;
+  grid-template-columns: 455px 1fr;
+  align-items: center;
+  gap: 33px;
+}
+
+.offer .content-offer span{
+  color: var(--nikeText);
+}
+
+.image-offer img{
+  width: 100%;
+}
+
+.content-offer p{
+  margin: 18px 0;
+  color: var(--textColor);
+}
+
+.content-offer .btns{
+  display: flex;
+  gap: 15px;
+}
+.content-offer button{
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  gap: 6px;
+  border-radius: 30px;
+  border: none;
+  font-size: 13px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.content-offer button:first-child{
+  background-color: var(--nikeText);
+  color: var(--white);
+}
+.content-offer button:first-child:hover{
+  background-color: var(--white);
+  color: var(--nikeText);
+  border: 1px solid var(--nikeText);
+}
+.content-offer button:nth-child(2){
+  background-color: transparent;
+  border: 1px solid var(--textColor);
+  color: var(--nikeText);
+}
+
+.customers{
+  width: 100%;
+  height: 100vh;
+  background-color: #c9d4e165;
+  padding: 45px 0;
+}
+.customers .says{
+  width: 85%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.says p.ptest{
+  font-size: 15px;
+  margin: 20px 0;
+  color: var(--textColor);
+}
+
+.says h2 span{
+  color: var(--nikeText);
+}
+.says .clients{
+  width: 70%;
+  display: grid;
+  margin: 60px auto;
+  gap: 50px;
+  grid-template-columns: repeat(2, 300px);
+  justify-content: space-between;
+}
+
+.clients .firstclient{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+}
+
+.firstclient p{
+  color: var(--textColor);
+}
+
+.firstclient img{
+  width: 65px;
+  border-radius: 50%;
+}
+
+.svgf{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.firstclient .svgf img{
+  width: 22px;
+}
+.morich{
+  font-weight: var(--fontw);
+}
+
+.customers .signup{
+  width: 100%;
+  height: 170px;
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  padding: 4% 15%;
+}
+.signup .input{
+  width: 35%;
+  height: 35px;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  border: 1px solid var(--textColor);
+}
+.signup h2{
+  line-height: 1.5;
+}
+
+.input input{
+  width: 80%;
+  border: none;
+  padding-left: 10px;
+  outline: none;
+}
+
+.input .btn-nike{
+  border: none;
+  border-radius: 20px;
+  width: 90px;
+  font-size: 13px;
+  padding: 5px 0;
+  color: var(--white);
+  background-color: var(--nikeText);
+  cursor: pointer;
+
+}
+
+.updates{
+  color: var(--nikeText);
+}
+
+footer{
+  width: 100%;
+  height: 370px;
+  background-color: var(--black);
+  padding: 60px 15% 15px;
+  color: var(--white);
+  overflow: hidden;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-logo{
+  flex: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-logo .coo{
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #d0d0d0;
+}
+.footer-logo .coo .imhh{
+  width: 105px;
+  height: 30px;
+}
+.footer-list{
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer-list .last{
+  align-self: flex-end;
+  font-size: 14px;
+}
+
+footer .fnav {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+footer .fnav ul{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style: none;
+}
+.fnav ul li{
+  font-size: 14px;
+  color: #d0d0d0;
+}
+ul h4{
+  margin-bottom: 6px;
+}
+.terms{
+  font-size: 14px;
+  color: #d0d0d0;
+}
+.icons-footer{
+  display: flex;
+  gap: 10px;
+}
+.ficon{
+  background-color: var(--white);
+  border-radius: 30px;
+  padding: 7px;
+  width: 32px;
+}
+
+
+
+
+@media (max-width:420px) {
+
+  .banner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .banner header{
+    width: 100%;
+    position: relative;
+    background-color:var(--white);
+    display: flex;
+    padding: 12px 22px;
+  }
+
+  header .navlist{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: #000000;
+    width: 70%;
+    height: 100%;
+    color: var(--white);
+    transition: all .6s ease;
+  }
+
+  .navlist ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 44px;
+  }
+  .navlist ul li{
+    color: var(--white);
+    font-size: 16px;
+  }
+
+  header .btnside button{
+    display: none;
+  }
+
+  header .btnside .humb{
+    display: block;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .banner .main{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+  }
+
+  .main .content{
+    width: 100%;
+    padding: 0px 22px;
+  }
+  .arrival{
+    background-color: transparent;
+    z-index: -1;
+  }
+  .nike{
+    color: var(--nikeText);
+  }
+
+  .summer{
+    font-size: 12px;
+    font-weight: 100;
+    color: var(--nikeText);
+  }
+  
+  .content .conteudo{
+    margin-top: 90px;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+  }
+  
+  .content .conteudo h1{
+    font-size: 2rem;
+  }
+
+  .conteudo p{
+    font-size: 15px;
+  }
+
+  .conteudo .plus{
+    display: flex;
+    gap: 30px;
+    margin-top:50px;
+  }
+  
+  .plus p{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+  }
+  
+  p .big{
+    font-size: 1.2rem;
+    font-weight: var(--fontw);
+    color: var(--black);
+  }
+  p .small{
+    font-size: 12px;
+  }
+
+  .main .images{
+    display: none;
+  }
+
+  body{
+    background-color: #fff;
+  }
+  section .product{
+    padding: 0 22px;
+    width: 100%;
+    height: 100%;
+    margin: 10px auto;
+  }
+
+  .product h2{
+    font-size: 1.5rem;
+  }
+  .product p{
+    margin-bottom: 40px;
+    text-align: justify;
+    width: 100%;
+    font-size: 15px;
+    color: var(--textColor);
+  }
+  .product .shoes{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 45px;
+  }
+  
+  .shoes > div{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  
+  }
+  .shoes> div .conteshoes{
+    font-size: 13px;
+  }
+  
+  section .another{
+    width: 100%;
+    height: 100%;
+    margin: 90px auto;
+    padding: 0 22px;
+  }
+
+  .another .provide{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-between;
+  }
+
+  .provide .two,
+  .provide .one{
+    width:100%;
+  }
+  .provide .two {
+    order: 1;
+  }
+
+  .provide .one p{
+    font-size: 15px;
+  }
+
+  section .corners{
+    padding: 0 22px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .corners .cor{
+    box-shadow: 4px 4px 10px 8px rgb(233, 233, 233);
+    padding: 25px 15px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .cor h3{
+    font-size: 1.2rem;
+  }
+  .cor p{
+    font-size: 1ppx;
+    color: var(--textColor);
+  }
+
+  .corners .circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 30px;
+    background-color: var(--white);
+    border: 8px solid var(--nikeText);
+  }
+
+  section .offer{
+    width: 100%;
+    padding: 0 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+  }
+  .offer h2{
+    font-size: 1.6rem;
+  }
+
+  .offer p{
+    font-size: 15px;
+    color: var(--textColor);
+    margin: 15px 0;
+    text-align: justify;
+  }
+  
+  .image-offer img{
+    width: 100%;
+  }
+
+  .content-offer .btns{
+    display: flex;
+    gap: 15px;
+  }
+  .content-offer button{
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    gap: 6px;
+    border-radius: 30px;
+    border: none;
+    font-size: 13px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  .content-offer button:first-child{
+    background-color: var(--nikeText);
+    color: var(--white);
+  }
+  .content-offer button:first-child:hover{
+    background-color: var(--white);
+    color: var(--nikeText);
+    border: 1px solid var(--nikeText);
+  }
+
+  .content-offer button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid var(--textColor);
+    color: var(--nikeText);
+  }
+  .customers{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0;
+    background-color: #c9d4e165;
+  }
+  .customers .says{
+    width: 100%;
+    padding: 0 22px;
+  }
+  .says .clients{
+    width: 70%;
+    display: grid;
+    margin: 60px auto;
+    gap: 50px;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+  }
+  
+  .clients .firstclient{
+    width: 100%;
+  }
+  .customers .signup{
+    width: 100%;
+    height: 200px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    gap: 30px;
+  }
+
+  .updates{
+    color: var(--nikeText);
+  }
+
+  .signup .input{
+    width: 100%;
+    height: 35px;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border: 1px solid var(--textColor);
+  }
+
+  .input input{
+    width: 80%;
+    border: none;
+    padding-left: 10px;
+    outline: none;
+  }
+  
+  .input .btn-nike{
+    border: none;
+    border-radius: 20px;
+    width: 90px;
+    font-size: 13px;
+    padding: 5px 0;
+    color: var(--white);
+    background-color: var(--nikeText);
+    cursor: pointer;
+  }
+  footer{
+    width: 100%;
+    height: 100%;
+    padding: 15% 22px 15px;
+    flex-direction: column;
+  }
+  .footer-logo{
+    order: 2;
+    margin-top: 30px;
+  }
+  
+  .footer-logo .coo{
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #d0d0d0;
+  }
+  .footer-list .last{
+    margin-top: 33px;
+    align-self: flex-start;
+    font-size: 14px;
+  }
+  .terms{
+    margin-top: 30px;
+  }
+
+  footer .fnav{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+    
+  
+}
